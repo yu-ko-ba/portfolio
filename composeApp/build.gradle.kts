@@ -51,3 +51,7 @@ kotlin {
         }
     }
 }
+
+aboutLibraries {
+    registerAndroidTasks = false
+}
