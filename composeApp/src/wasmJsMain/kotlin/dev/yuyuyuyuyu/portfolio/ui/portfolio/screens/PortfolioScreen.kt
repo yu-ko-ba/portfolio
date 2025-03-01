@@ -18,6 +18,7 @@ fun PortfolioScreen(
     val navigationItems = listOf(
         Screen.Apps,
         Screen.Libraries,
+        Screen.Pluigins,
     )
 
     var currentRoute: Screen by rememberSaveable { mutableStateOf(Screen.Apps) }
@@ -42,13 +43,9 @@ fun PortfolioScreen(
             modifier = modifier.padding(innerPadding),
         ) {
             when (currentRoute) {
-                Screen.Apps -> {
-                    AppsScreen()
-                }
-
-                Screen.Libraries -> {
-                    LibrariesScreen()
-                }
+                Screen.Apps -> AppsScreen()
+                Screen.Libraries -> LibrariesScreen()
+                Screen.Pluigins -> PluginsScreen()
             }
         }
     }
