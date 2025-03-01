@@ -25,7 +25,6 @@ fun PortfolioScreen(
     Scaffold(
         bottomBar = {
             NavigationBar {
-
                 navigationItems.forEach { screen ->
                     NavigationBarItem(
                         icon = { Icon(imageVector = screen.icon, contentDescription = screen.route) },
