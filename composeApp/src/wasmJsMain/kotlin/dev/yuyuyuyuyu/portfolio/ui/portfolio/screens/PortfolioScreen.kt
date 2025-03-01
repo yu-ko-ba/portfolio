@@ -19,6 +19,7 @@ fun PortfolioScreen(
         Screen.Apps,
         Screen.Libraries,
         Screen.Pluigins,
+        Screen.CliTools,
     )
 
     var currentRoute: Screen by rememberSaveable { mutableStateOf(Screen.Apps) }
@@ -46,6 +47,7 @@ fun PortfolioScreen(
                 Screen.Apps -> AppsScreen()
                 Screen.Libraries -> LibrariesScreen()
                 Screen.Pluigins -> PluginsScreen()
+                Screen.CliTools -> CliToolsScreen()
             }
         }
     }
