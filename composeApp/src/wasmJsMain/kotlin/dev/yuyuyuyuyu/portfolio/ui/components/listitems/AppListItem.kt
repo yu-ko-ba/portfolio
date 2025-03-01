@@ -56,7 +56,6 @@ fun AppListItem(
                                 label = { Text(it.label) },
                                 onClick = {},
                                 modifier = Modifier.height(25.dp),
-//                                enabled = false,
                             )
                         }
                     }
@@ -77,21 +76,24 @@ fun AppListItem(
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
                 if (app.url != null) {
-                    Row(
-                        modifier = Modifier.clickable {
+                    Button(
+                        content = {
+                            Row {
+                                Icon(Icons.AutoMirrored.Default.OpenInNew, "open in new tab")
+                                Spacer(Modifier.width(1.dp))
+                                Text("アプリを開く")
+                            }
+                        },
+                        onClick = {
                             uriHandler.openUri(app.url)
                         },
-                    ) {
-                        Icon(Icons.AutoMirrored.Default.OpenInNew, "open in new tab")
-                        Spacer(Modifier.width(1.dp))
-                        Text(
-                            text = "アプリを開く",
-                            textDecoration = TextDecoration.Underline,
-                        )
-                    }
+                        modifier = Modifier.fillMaxWidth().padding(10.dp),
+                    )
                 }
 
-                Column {
+                Column(
+                    modifier = Modifier.padding(horizontal = 10.dp),
+                ) {
                     Text(
                         "ソースコード",
                         style = MaterialTheme.typography.titleMedium,
