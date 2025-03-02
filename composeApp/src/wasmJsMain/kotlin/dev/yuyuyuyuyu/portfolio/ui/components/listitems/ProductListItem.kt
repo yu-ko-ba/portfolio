@@ -44,6 +44,7 @@ fun ProductListItem(
     if (expanded) {
         ItemBody(
             repositoryUrl = product.repositoryUrl,
+            sourceCodeLabel = "GitHub",
             onSourceCodeLinkClick = { uriHandler.openUri(product.repositoryUrl) },
         )
     }

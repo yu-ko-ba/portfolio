@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 fun ItemBody(
     repositoryUrl: String,
     modifier: Modifier = Modifier,
+    sourceCodeLabel: String = "ソースコード",
     onSourceCodeLinkClick: () -> Unit,
     additionalContent: @Composable () -> Unit = {},
 ) {
@@ -29,7 +30,7 @@ fun ItemBody(
             modifier = Modifier.padding(horizontal = 10.dp),
         ) {
             Text(
-                "ソースコード",
+                text = sourceCodeLabel,
                 style = MaterialTheme.typography.titleMedium,
             )
             Row(
