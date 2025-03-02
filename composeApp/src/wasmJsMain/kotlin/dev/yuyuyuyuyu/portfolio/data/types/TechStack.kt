@@ -5,6 +5,7 @@ enum class TechStack(val label: String) {
     Android("Android"),
     Web("Web"),
     Neovim("Neovim"),
+    NodeJs("Node.js"),
     Swift("Swift"),
     Kotlin("Kotlin"),
     React("React"),

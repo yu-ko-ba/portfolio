@@ -1,19 +1,27 @@
 package dev.yuyuyuyuyu.portfolio.ui.portfolio.screens
 
-import androidx.compose.foundation.layout.Row
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Bolt
-import androidx.compose.material3.Icon
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import dev.yuyuyuyuyu.portfolio.data.repositories.CliToolsRepository
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.ProductListItem
 
 @Composable
 fun CliToolsScreen(
+    cliToolsRepository: CliToolsRepository = CliToolsRepository(),
     modifier: Modifier = Modifier,
+) = LazyColumn(
+    modifier = modifier,
+    verticalArrangement = Arrangement.spacedBy(40.dp),
 ) {
-    Row {
-        Icon(Icons.Default.Bolt, null)
-        Text("実装中...")
+    items(cliToolsRepository.getCliTools().sortedBy { it.repositoryUrl }) { product ->
+        ProductListItem(product)
+    }
+    item {
+        Spacer(Modifier)
     }
 }
