@@ -8,7 +8,11 @@ import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -26,7 +30,7 @@ fun AppListItem(
 ) {
     val uriHandler = LocalUriHandler.current
 
-    var expanded by remember { mutableStateOf(false) }
+    var expanded by rememberSaveable { mutableStateOf(false) }
 
     Column(
         modifier = modifier,
@@ -76,19 +80,23 @@ fun AppListItem(
                 verticalArrangement = Arrangement.spacedBy(10.dp)
             ) {
                 if (app.url != null) {
-                    Button(
-                        content = {
-                            Row {
-                                Icon(Icons.AutoMirrored.Default.OpenInNew, "open in new tab")
-                                Spacer(Modifier.width(1.dp))
-                                Text("アプリを開く")
-                            }
-                        },
-                        onClick = {
-                            uriHandler.openUri(app.url)
-                        },
-                        modifier = Modifier.fillMaxWidth().padding(10.dp),
-                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center,
+                    ) {
+                        Button(
+                            content = {
+                                Row {
+                                    Icon(Icons.AutoMirrored.Default.OpenInNew, "open in new tab")
+                                    Spacer(Modifier.width(1.dp))
+                                    Text("アプリページを開く")
+                                }
+                            },
+                            onClick = {
+                                uriHandler.openUri(app.url)
+                            },
+                        )
+                    }
                 }
 
                 Column(

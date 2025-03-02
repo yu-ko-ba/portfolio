@@ -17,7 +17,7 @@ fun AppsScreen(
 ) {
     LazyColumn(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(20.dp)
+        verticalArrangement = Arrangement.spacedBy(40.dp)
     ) {
         items(appsRepository.getApps().sortedBy { it.repositoryUrl.lowercase() }) { app ->
             AppListItem(app)
