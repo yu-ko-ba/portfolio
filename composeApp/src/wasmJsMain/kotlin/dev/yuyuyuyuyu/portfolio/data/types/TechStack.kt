@@ -18,5 +18,8 @@ enum class TechStack(val label: String) {
     ComposeMultiplatform("Compose Multiplatform"),
     MaterialUi("Material UI"),
     AngularMaterial("Angular Material"),
+    Aws("AWS"),
+    AwsLambda("AWS Lambda"),
+    AmazonDynamoDb("Amazon DynamoDB"),
     Pwa("Progressive web app")
 }

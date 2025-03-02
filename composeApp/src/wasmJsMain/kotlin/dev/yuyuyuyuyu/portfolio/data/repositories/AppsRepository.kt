@@ -83,6 +83,23 @@ class AppsRepository {
             repositoryUrl = "https://github.com/yu-ko-ba/ym-previewer",
         ),
         App(
+            name = "deliciouShare.app",
+            description = "「おいしい！」の情報共有を効率化するWebサービス",
+            icon = Res.drawable.delicioushareapp_icon,
+            techStack = setOf(
+                TechStack.Web,
+                TechStack.NextJs,
+                TechStack.TypeScript,
+                TechStack.MaterialUi,
+                TechStack.Go,
+                TechStack.Aws,
+                TechStack.AwsLambda,
+                TechStack.AmazonDynamoDb,
+                TechStack.Pwa,
+            ),
+            repositoryUrl = "https://github.com/yu-ko-ba/deliciouShare",
+        ),
+        App(
             name = "パスワードジェネレーター",
             description = "ひらがなカタカナ対応の簡易パスワードジェネレーター",
             techStack = setOf(TechStack.Web, TechStack.NextJs, TechStack.TypeScript, TechStack.MaterialUi),
