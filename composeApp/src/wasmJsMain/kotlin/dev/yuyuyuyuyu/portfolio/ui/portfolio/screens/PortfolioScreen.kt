@@ -15,12 +15,7 @@ import dev.yuyuyuyuyu.portfolio.ui.portfolio.Screen
 fun PortfolioScreen(
     modifier: Modifier = Modifier,
 ) {
-    val navigationItems = listOf(
-        Screen.Apps,
-        Screen.Libraries,
-        Screen.Pluigins,
-        Screen.CliTools,
-    )
+    val navigationItems = Screen.entries.toList()
 
     var currentRoute: Screen by rememberSaveable { mutableStateOf(Screen.Apps) }
 
