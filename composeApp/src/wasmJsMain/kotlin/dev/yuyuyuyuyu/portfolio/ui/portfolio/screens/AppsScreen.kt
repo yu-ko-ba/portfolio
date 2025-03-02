@@ -14,16 +14,14 @@ import dev.yuyuyuyuyu.portfolio.ui.components.listitems.AppListItem
 fun AppsScreen(
     appsRepository: AppsRepository = AppsRepository(),
     modifier: Modifier = Modifier,
+) = LazyColumn(
+    modifier = modifier,
+    verticalArrangement = Arrangement.spacedBy(40.dp),
 ) {
-    LazyColumn(
-        modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(40.dp)
-    ) {
-        items(appsRepository.getApps().sortedBy { it.repositoryUrl.lowercase() }) { app ->
-            AppListItem(app)
-        }
-        item {
-            Spacer(Modifier)
-        }
+    items(appsRepository.getApps().sortedBy { it.repositoryUrl }) { app ->
+        AppListItem(app)
+    }
+    item {
+        Spacer(Modifier)
     }
 }

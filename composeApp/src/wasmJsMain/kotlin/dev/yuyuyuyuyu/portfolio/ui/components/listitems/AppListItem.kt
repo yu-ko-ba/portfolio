@@ -1,13 +1,16 @@
 package dev.yuyuyuyuyu.portfolio.ui.components.listitems
 
-import androidx.compose.foundation.*
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material3.*
+import androidx.compose.material3.Button
+import androidx.compose.material3.Icon
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -18,9 +21,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalUriHandler
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import dev.yuyuyuyuyu.portfolio.data.types.App
+import dev.yuyuyuyuyu.portfolio.ui.components.ExpandMoreIcon
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.parts.ItemBody
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.parts.SupportingContent
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
@@ -49,35 +54,19 @@ fun AppListItem(
             },
             headlineContent = { Text(app.name) },
             supportingContent = {
-                Column {
-                    Text(app.description)
-                    Row(
-                        modifier = Modifier.horizontalScroll(rememberScrollState()),
-                        horizontalArrangement = Arrangement.spacedBy(3.dp)
-                    ) {
-                        app.techStack.sorted().forEach {
-                            AssistChip(
-                                label = { Text(it.label) },
-                                onClick = {},
-                                modifier = Modifier.height(25.dp),
-                            )
-                        }
-                    }
-                }
+                SupportingContent(
+                    description = app.description,
+                    techStack = app.techStack,
+                )
             },
-            trailingContent = {
-                if (expanded) {
-                    Icon(Icons.Default.KeyboardArrowUp, "close")
-                } else {
-                    Icon(Icons.Default.KeyboardArrowDown, "open")
-                }
-            },
+            trailingContent = { ExpandMoreIcon(expanded) },
             modifier = Modifier.clickable { expanded = !expanded },
         )
 
         if (expanded) {
-            Column(
-                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ItemBody(
+                repositoryUrl = app.repositoryUrl,
+                onSourceCodeLinkClick = { uriHandler.openUri(app.repositoryUrl) },
             ) {
                 if (app.url != null) {
                     Row(
@@ -92,31 +81,7 @@ fun AppListItem(
                                     Text("アプリページを開く")
                                 }
                             },
-                            onClick = {
-                                uriHandler.openUri(app.url)
-                            },
-                        )
-                    }
-                }
-
-                Column(
-                    modifier = Modifier.padding(horizontal = 10.dp),
-                ) {
-                    Text(
-                        "ソースコード",
-                        style = MaterialTheme.typography.titleMedium,
-                    )
-                    Row(
-                        modifier = Modifier.clickable {
-                            uriHandler.openUri(app.repositoryUrl)
-                        },
-                    ) {
-                        Icon(Icons.AutoMirrored.Default.OpenInNew, "open in new tab")
-                        Spacer(Modifier.width(1.dp))
-                        Text(
-                            text = app.repositoryUrl,
-                            color = MaterialTheme.colorScheme.outline,
-                            textDecoration = TextDecoration.Underline,
+                            onClick = { uriHandler.openUri(app.url) },
                         )
                     }
                 }

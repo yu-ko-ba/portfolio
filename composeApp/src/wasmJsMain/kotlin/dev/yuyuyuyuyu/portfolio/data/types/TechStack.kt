@@ -10,6 +10,7 @@ enum class TechStack(val label: String) {
     NextJs("Next.js"),
     Angular("Angular"),
     TypeScript("TypeScript"),
+    Sass("Sass"),
     Go("Go"),
     Html("HTML"),
     Css("CSS"),
