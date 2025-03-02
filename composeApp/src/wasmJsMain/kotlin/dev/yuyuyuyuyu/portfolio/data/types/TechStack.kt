@@ -18,6 +18,8 @@ enum class TechStack(val label: String) {
     Html("HTML"),
     Css("CSS"),
     JavaScript("JavaScript"),
+    Bash("Bash"),
+    Python("Python"),
     JetpackCompose("Jetpack Compose"),
     ComposeMultiplatform("Compose Multiplatform"),
     MaterialUi("Material UI"),
@@ -25,5 +27,6 @@ enum class TechStack(val label: String) {
     Aws("AWS"),
     AwsLambda("AWS Lambda"),
     AmazonDynamoDb("Amazon DynamoDB"),
+    Docker("Docker"),
     Pwa("Progressive web app")
 }
