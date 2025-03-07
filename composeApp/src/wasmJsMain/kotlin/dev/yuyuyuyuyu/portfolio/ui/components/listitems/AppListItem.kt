@@ -24,8 +24,8 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import dev.yuyuyuyuyu.portfolio.data.types.App
 import dev.yuyuyuyuyu.portfolio.ui.components.ExpandMoreIcon
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.parts.ItemBody
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.parts.SupportingContent
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.share.ItemBody
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.share.SupportingContent
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
