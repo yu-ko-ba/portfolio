@@ -13,8 +13,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import dev.yuyuyuyuyu.portfolio.data.types.Product
 import dev.yuyuyuyuyu.portfolio.ui.components.ExpandMoreIcon
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.parts.ItemBody
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.parts.SupportingContent
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.share.ItemBody
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.share.SupportingContent
 
 @Composable
 fun ProductListItem(

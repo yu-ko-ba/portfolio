@@ -4,6 +4,8 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
@@ -24,8 +26,8 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.dp
 import dev.yuyuyuyuyu.portfolio.data.types.App
 import dev.yuyuyuyuyu.portfolio.ui.components.ExpandMoreIcon
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.parts.ItemBody
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.parts.SupportingContent
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.share.ItemBody
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.share.SupportingContent
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
@@ -68,21 +70,40 @@ fun AppListItem(
                 repositoryUrl = app.repositoryUrl,
                 onSourceCodeLinkClick = { uriHandler.openUri(app.repositoryUrl) },
             ) {
-                if (app.url != null) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.Center,
-                    ) {
-                        Button(
-                            content = {
-                                Row {
-                                    Icon(Icons.AutoMirrored.Default.OpenInNew, "open in new tab")
-                                    Spacer(Modifier.width(1.dp))
-                                    Text("アプリページを開く")
+                Column(
+                    modifier = Modifier.padding(horizontal = 10.dp),
+                    verticalArrangement = Arrangement.spacedBy(20.dp),
+                ) {
+                    if (app.url != null) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.Center,
+                        ) {
+                            Button(
+                                content = {
+                                    Row {
+                                        Icon(Icons.AutoMirrored.Default.OpenInNew, "open in new tab")
+                                        Spacer(Modifier.width(1.dp))
+                                        Text("アプリページを開く")
+                                    }
+                                },
+                                onClick = { uriHandler.openUri(app.url) },
+                            )
+                        }
+                    }
+
+                    if (app.screenshots.isNotEmpty()) {
+                        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                            Text("スクリーンショット")
+
+                            LazyRow(
+                                horizontalArrangement = Arrangement.spacedBy(20.dp),
+                            ) {
+                                items(app.screenshots) { screenshot ->
+                                    Image(painterResource(screenshot), "${app.name}'s screenshot")
                                 }
-                            },
-                            onClick = { uriHandler.openUri(app.url) },
-                        )
+                            }
+                        }
                     }
                 }
             }

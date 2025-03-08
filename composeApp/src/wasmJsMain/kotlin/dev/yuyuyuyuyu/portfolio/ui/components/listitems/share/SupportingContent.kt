@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.components.listitems.parts
+package dev.yuyuyuyuyu.portfolio.ui.components.listitems.share
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement

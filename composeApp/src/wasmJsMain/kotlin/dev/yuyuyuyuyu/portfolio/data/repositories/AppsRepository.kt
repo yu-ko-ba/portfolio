@@ -3,10 +3,6 @@ package dev.yuyuyuyuyu.portfolio.data.repositories
 import dev.yuyuyuyuyu.portfolio.data.types.App
 import dev.yuyuyuyuyu.portfolio.data.types.TechStack
 import portfolio.composeapp.generated.resources.*
-import portfolio.composeapp.generated.resources.Res
-import portfolio.composeapp.generated.resources.howoldami_icon
-import portfolio.composeapp.generated.resources.locationremover_icon
-import portfolio.composeapp.generated.resources.whatisthedatetoday_icon
 
 class AppsRepository {
     private val apps = listOf(
@@ -30,6 +26,7 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.Html, TechStack.Css, TechStack.Go, TechStack.Pwa),
             url = "https://yu-ko-ba.github.io/what-is-the-date-today/",
             repositoryUrl = "https://github.com/yu-ko-ba/what-is-the-date-today",
+            screenshots = listOf(Res.drawable.what_is_the_date_today_screenshot),
         ),
         App(
             name = "年齢の計算",
@@ -38,6 +35,7 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.Kotlin, TechStack.ComposeMultiplatform, TechStack.Pwa),
             url = "https://how-old-am-i.yuyuyuyuyu.dev",
             repositoryUrl = "https://github.com/yu-ko-ba/how-old-am-i",
+            screenshots = listOf(Res.drawable.how_old_am_i_screenshot),
         ),
         App(
             name = "Location Remover",
@@ -46,6 +44,7 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.Html, TechStack.Css, TechStack.JavaScript, TechStack.Pwa),
             url = "https://yu-ko-ba.github.io/location-remover/",
             repositoryUrl = "https://github.com/yu-ko-ba/location-remover",
+            screenshots = listOf(Res.drawable.LocationRemover_screenshot),
         ),
         App(
             name = "クリップボードへコピー",
@@ -53,6 +52,7 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.TypeScript, TechStack.React, TechStack.MaterialUi),
             url = "https://yu-ko-ba.github.io/copy-to-clipboard/",
             repositoryUrl = "https://github.com/yu-ko-ba/copy-to-clipboard",
+            screenshots = listOf(Res.drawable.copy_to_clipboard_screenshot),
         ),
         App(
             name = "乱数の生成",
@@ -60,6 +60,7 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.TypeScript, TechStack.React, TechStack.MaterialUi),
             url = "https://yu-ko-ba.github.io/get-random-int/",
             repositoryUrl = "https://github.com/yu-ko-ba/get-random-int",
+            screenshots = listOf(Res.drawable.get_random_int_screenshot),
         ),
         App(
             name = "genkaikor",
@@ -67,6 +68,7 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.TypeScript, TechStack.NextJs, TechStack.MaterialUi),
             url = "https://yu-ko-ba.github.io/genkaikor/",
             repositoryUrl = "https://github.com/yu-ko-ba/genkaikor",
+            screenshots = listOf(Res.drawable.genkaikor_screenshot),
         ),
         App(
             name = "repeater",
@@ -74,6 +76,7 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.TypeScript, TechStack.NextJs, TechStack.MaterialUi),
             url = "https://yu-ko-ba.github.io/repeater/",
             repositoryUrl = "https://github.com/yu-ko-ba/repeater",
+            screenshots = listOf(Res.drawable.repeater_screenshot),
         ),
         App(
             name = "YM previewer for Twitter",
@@ -81,6 +84,7 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.NextJs, TechStack.TypeScript, TechStack.MaterialUi),
             url = "https://ym-previewer.vercel.app",
             repositoryUrl = "https://github.com/yu-ko-ba/ym-previewer",
+            screenshots = listOf(Res.drawable.ym_previewer_screenshot),
         ),
         App(
             name = "deliciouShare.app",
@@ -105,6 +109,7 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.NextJs, TechStack.TypeScript, TechStack.MaterialUi),
             url = "https://password-generator-yu-ko-ba.vercel.app",
             repositoryUrl = "https://github.com/yu-ko-ba/password-generator",
+            screenshots = listOf(Res.drawable.PasswordGenerator_screenshot),
         ),
         App(
             name = "引けない確率の計算",
@@ -112,6 +117,7 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.Angular, TechStack.TypeScript, TechStack.AngularMaterial),
             url = "https://non-drawing-probability-calculator.vercel.app",
             repositoryUrl = "https://github.com/yu-ko-ba/not-pulling-probability-calculator",
+            screenshots = listOf(Res.drawable.not_pulling_probability_calculator_screenshot),
         ),
         App(
             name = "ToLeet",
@@ -119,18 +125,21 @@ class AppsRepository {
             techStack = setOf(TechStack.Web, TechStack.Angular, TechStack.TypeScript, TechStack.AngularMaterial),
             url = "https://to-leet.vercel.app",
             repositoryUrl = "https://github.com/yu-ko-ba/to-leet",
+            screenshots = listOf(Res.drawable.to_leet_screenshot),
         ),
         App(
             name = "気圧計",
             description = "気圧センサーの値を表示するアプリ",
             techStack = setOf(TechStack.Android, TechStack.Kotlin, TechStack.JetpackCompose),
             repositoryUrl = "https://github.com/yu-ko-ba/barometer",
+            screenshots = listOf(Res.drawable.barometer_en_screenshot, Res.drawable.barometer_ja_screenshot),
         ),
         App(
             name = "コードスキャナー",
             description = "シンプルなコードスキャナーアプリ",
             techStack = setOf(TechStack.Android, TechStack.Kotlin, TechStack.JetpackCompose),
             repositoryUrl = "https://github.com/yu-ko-ba/CodeScanner",
+            screenshots = listOf(Res.drawable.CodeScanner_screenshot),
         ),
     )
 
