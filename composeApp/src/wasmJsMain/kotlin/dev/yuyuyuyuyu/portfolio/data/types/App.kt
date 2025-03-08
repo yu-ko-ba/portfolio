@@ -9,6 +9,7 @@ data class App(
     val description: String,
     val techStack: Set<TechStack>,
     val repositoryUrl: String,
+    val screenshots: List<DrawableResource> = listOf(),
     val url: String? = null,
     val icon: DrawableResource = Res.drawable.default_icon,
 )
