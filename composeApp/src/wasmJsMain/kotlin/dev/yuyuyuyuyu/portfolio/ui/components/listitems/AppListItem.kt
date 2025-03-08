@@ -92,19 +92,19 @@ fun AppListItem(
                         }
                     }
 
-                    if (app.screenshots.isNotEmpty()) {
-                        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("スクリーンショット")
-
-                            LazyRow(
-                                horizontalArrangement = Arrangement.spacedBy(20.dp),
-                            ) {
-                                items(app.screenshots) { screenshot ->
-                                    Image(painterResource(screenshot), "${app.name}'s screenshot")
-                                }
-                            }
-                        }
-                    }
+//                    if (app.screenshots.isNotEmpty()) {
+//                        Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+//                            Text("スクリーンショット")
+//
+//                            LazyRow(
+//                                horizontalArrangement = Arrangement.spacedBy(20.dp),
+//                            ) {
+//                                items(app.screenshots) { screenshot ->
+//                                    Image(painterResource(screenshot), "${app.name}'s screenshot")
+//                                }
+//                            }
+//                        }
+//                    }
                 }
             }
         }
