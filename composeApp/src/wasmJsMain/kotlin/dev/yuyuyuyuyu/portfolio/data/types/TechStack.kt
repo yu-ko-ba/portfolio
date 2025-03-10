@@ -28,5 +28,5 @@ enum class TechStack(val label: String) {
     AwsLambda("AWS Lambda"),
     AmazonDynamoDb("Amazon DynamoDB"),
     Docker("Docker"),
-    Pwa("Progressive web app")
+    Pwa("Progressive web app (PWA)")
 }

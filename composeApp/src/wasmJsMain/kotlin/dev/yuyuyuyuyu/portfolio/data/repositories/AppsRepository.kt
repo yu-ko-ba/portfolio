@@ -114,7 +114,13 @@ class AppsRepository {
         App(
             name = "引けない確率の計算",
             description = "1度も引けない確率を計算するアプリ",
-            techStack = setOf(TechStack.Web, TechStack.Angular, TechStack.TypeScript, TechStack.AngularMaterial),
+            techStack = setOf(
+                TechStack.Web,
+                TechStack.Angular,
+                TechStack.TypeScript,
+                TechStack.AngularMaterial,
+                TechStack.Pwa,
+            ),
             url = "https://non-drawing-probability-calculator.vercel.app",
             repositoryUrl = "https://github.com/yu-ko-ba/not-pulling-probability-calculator",
             screenshots = listOf(Res.drawable.not_pulling_probability_calculator_screenshot),
@@ -122,7 +128,13 @@ class AppsRepository {
         App(
             name = "ToLeet",
             description = "L33t表記へ変換するアプリ",
-            techStack = setOf(TechStack.Web, TechStack.Angular, TechStack.TypeScript, TechStack.AngularMaterial),
+            techStack = setOf(
+                TechStack.Web,
+                TechStack.Angular,
+                TechStack.TypeScript,
+                TechStack.AngularMaterial,
+                TechStack.Pwa,
+            ),
             url = "https://to-leet.vercel.app",
             repositoryUrl = "https://github.com/yu-ko-ba/to-leet",
             screenshots = listOf(Res.drawable.to_leet_screenshot),
