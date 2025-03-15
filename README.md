@@ -1,18 +1,10 @@
-This is a Kotlin Multiplatform project targeting Web.
+# portfolio
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+<a href="https://yuyuyuyuyu.dev" target="_blank" rel="noopener noreferrer">![Deploy to GitHub Pages](https://github.com/yu-ko-ba/portfolio/actions/workflows/deploy.yml/badge.svg)</a><br />
+<br />
 
+ポートフォリオサイト
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
+https://yuyuyuyuyu.dev
 
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
-
-You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+<img width="300" alt="Android main screen screenshot" src="https://github.com/user-attachments/assets/37e0204e-5be1-4e39-839b-53c4e1e49804" />
