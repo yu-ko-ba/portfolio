@@ -5,6 +5,7 @@ enum class TechStack(val label: String) {
     Android("Android"),
     Web("Web"),
     Neovim("Neovim"),
+    Gradle("Gradle"),
     NodeJs("Node.js"),
     Swift("Swift"),
     Kotlin("Kotlin"),
@@ -28,5 +29,5 @@ enum class TechStack(val label: String) {
     AwsLambda("AWS Lambda"),
     AmazonDynamoDb("Amazon DynamoDB"),
     Docker("Docker"),
-    Pwa("Progressive web app (PWA)")
+    Pwa("Progressive web app (PWA)"),
 }

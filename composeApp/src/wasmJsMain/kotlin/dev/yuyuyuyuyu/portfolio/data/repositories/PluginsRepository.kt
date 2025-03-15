@@ -11,6 +11,12 @@ class PluginsRepository {
             techStack = setOf(TechStack.Neovim, TechStack.Lua),
             repositoryUrl = "https://github.com/yu-ko-ba/insert-end-semicolon.nvim",
         ),
+        Product(
+            name = "ComposePWA",
+            description = "Compose Multiplatform製WebアプリをPWA化するGradleプラグイン",
+            techStack = setOf(TechStack.Kotlin, TechStack.ComposeMultiplatform, TechStack.Gradle),
+            repositoryUrl = "https://github.com/yu-ko-ba/ComposePWA",
+        )
     )
 
     fun getPlugins() = plugins
