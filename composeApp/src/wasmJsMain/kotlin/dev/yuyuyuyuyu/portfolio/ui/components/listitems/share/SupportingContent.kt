@@ -16,7 +16,7 @@ import dev.yuyuyuyuyu.portfolio.data.types.TechStack
 @Composable
 fun SupportingContent(
     description: String,
-    techStack: Set<TechStack>,
+    techStackSet: Set<TechStack>,
     modifier: Modifier = Modifier,
 ) = Column(modifier = modifier) {
     Text(description)
@@ -24,7 +24,7 @@ fun SupportingContent(
         modifier = Modifier.horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(3.dp)
     ) {
-        techStack.sorted().forEach {
+        techStackSet.sorted().forEach {
             AssistChip(
                 label = { Text(it.label) },
                 onClick = {},

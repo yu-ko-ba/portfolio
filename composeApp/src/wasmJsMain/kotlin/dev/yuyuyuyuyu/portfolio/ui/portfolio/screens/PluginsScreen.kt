@@ -6,21 +6,29 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import dev.yuyuyuyuyu.portfolio.data.repositories.PluginsRepository
 import dev.yuyuyuyuyu.portfolio.ui.components.listitems.ProductListItem
 
 @Composable
 fun PluginsScreen(
-    pluginsRepository: PluginsRepository = PluginsRepository(),
+    icon: ImageVector,
+    iconDescription: String,
     modifier: Modifier = Modifier,
+    pluginsRepository: PluginsRepository = PluginsRepository(),
 ) = LazyColumn(
     modifier = modifier,
     verticalArrangement = Arrangement.spacedBy(40.dp),
 ) {
     items(pluginsRepository.getPlugins().sortedBy { it.repositoryUrl }) { product ->
-        ProductListItem(product)
+        ProductListItem(
+            product = product,
+            icon = icon,
+            iconDescription = iconDescription,
+        )
     }
+
     item {
         Spacer(Modifier)
     }

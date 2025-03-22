@@ -40,9 +40,21 @@ fun PortfolioScreen(
         ) {
             when (currentRoute) {
                 Screen.Apps -> AppsScreen()
-                Screen.Libraries -> LibrariesScreen()
-                Screen.Pluigins -> PluginsScreen()
-                Screen.CliTools -> CliToolsScreen()
+               
+                Screen.Libraries -> LibrariesScreen(
+                    icon = currentRoute.icon,
+                    iconDescription = "${currentRoute.name} icon",
+                )
+
+                Screen.Pluigins -> PluginsScreen(
+                    icon = currentRoute.icon,
+                    iconDescription = "${currentRoute.name} icon",
+                )
+
+                Screen.CliTools -> CliToolsScreen(
+                    icon = currentRoute.icon,
+                    iconDescription = "${currentRoute.name} icon",
+                )
             }
         }
     }
