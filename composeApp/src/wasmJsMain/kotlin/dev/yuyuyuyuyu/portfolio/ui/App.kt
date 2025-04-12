@@ -1,15 +1,13 @@
 package dev.yuyuyuyuyu.portfolio.ui
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
@@ -24,6 +22,8 @@ import androidx.navigation.compose.rememberNavController
 import dev.yuyuyuyuyu.createtypography.createTypographyFrom
 import dev.yuyuyuyuyu.portfolio.ui.opensourcelicenses.screens.OpenSourceLicensesScreen
 import dev.yuyuyuyuyu.portfolio.ui.portfolio.screens.PortfolioScreen
+import dev.yuyuyuyuyu.portfolio.ui.theme.darkScheme
+import dev.yuyuyuyuyu.portfolio.ui.theme.lightScheme
 import dev.yuyuyuyuyu.simpletopappbar.SimpleTopAppBar
 import org.jetbrains.compose.resources.Font
 import portfolio.composeapp.generated.resources.Res
@@ -31,9 +31,11 @@ import portfolio.composeapp.generated.resources.Yomogi_Regular
 
 @Composable
 fun App(
+    colorScheme: ColorScheme = if (isSystemInDarkTheme()) darkScheme else lightScheme,
     navController: NavHostController = rememberNavController(),
 ) {
     MaterialTheme(
+        colorScheme = colorScheme,
         typography = createTypographyFrom(fontFamily = FontFamily(Font(Res.font.Yomogi_Regular))),
     ) {
         val backStackEntry by navController.currentBackStackEntryAsState()
