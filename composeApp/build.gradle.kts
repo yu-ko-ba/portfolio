@@ -48,6 +48,8 @@ kotlin {
             implementation(compose.materialIconsExtended)
 
             implementation(libs.circuit)
+
+            implementation(libs.koin.compose)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

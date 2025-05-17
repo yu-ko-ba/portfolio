@@ -153,7 +153,7 @@ class AppsRepository {
             repositoryUrl = "https://github.com/yu-ko-ba/CodeScanner",
             screenshots = listOf(Res.drawable.CodeScanner_screenshot),
         ),
-    )
+    ).sortedBy { it.repositoryUrl }
 
-    suspend fun getApps() = apps
+    fun getApps() = apps
 }
