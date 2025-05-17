@@ -7,6 +7,8 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
+
+    alias(libs.plugins.aboutLibraries)
 }
 
 kotlin {
@@ -50,6 +52,10 @@ kotlin {
             implementation(libs.circuit)
 
             implementation(libs.koin.compose)
+
+            implementation(libs.yuyuyuyuyu.simpleTopAppBar)
+
+            implementation(libs.aboutlibraries.compose.m3)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -72,4 +78,8 @@ compose.desktop {
             packageVersion = "1.0.0"
         }
     }
+}
+
+aboutLibraries {
+    android.registerAndroidTasks = false
 }
