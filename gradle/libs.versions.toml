@@ -8,6 +8,7 @@ kotlinx-coroutines = "1.10.2"
 circuit = "0.28.0"
 koin = "4.0.3"
 simpleTopAppBar = "0.1.0"
+createTypography = "0.1.0"
 aboutLibraries = "12.1.2"
 
 [libraries]
@@ -20,6 +21,7 @@ kotlinx-coroutinesSwing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-s
 circuit = { group = "com.slack.circuit", name = "circuit-foundation", version.ref = "circuit" }
 koin-compose = { group = "io.insert-koin", name = "koin-compose", version.ref = "koin" }
 yuyuyuyuyu-simpleTopAppBar = { group = "dev.yuyuyuyuyu", name = "simpletopappbar", version.ref = "simpleTopAppBar" }
+yuyuyuyuyu-createTypography = { group = "dev.yuyuyuyuyu", name = "createtypography", version.ref = "createTypography" }
 aboutlibraries-compose-m3 = { module = "com.mikepenz:aboutlibraries-compose-m3", version.ref = "aboutLibraries" }      # Material 3 UI
 
 [plugins]

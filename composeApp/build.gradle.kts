@@ -16,7 +16,7 @@ kotlin {
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        moduleName = "composeApp"
+        outputModuleName = "composeApp"
         browser {
             val rootDirPath = project.rootDir.path
             val projectDirPath = project.projectDir.path
@@ -54,6 +54,7 @@ kotlin {
             implementation(libs.koin.compose)
 
             implementation(libs.yuyuyuyuyu.simpleTopAppBar)
+            implementation(libs.yuyuyuyuyu.createTypography)
 
             implementation(libs.aboutlibraries.compose.m3)
         }

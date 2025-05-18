@@ -20,11 +20,14 @@ fun SupportingContent(
     description: String,
     techStackSet: Set<TechStack>,
     modifier: Modifier = Modifier,
-) = Column(modifier = modifier) {
+) = Column(
+    modifier = modifier,
+    verticalArrangement = Arrangement.spacedBy(3.dp),
+) {
     Text(description)
     Row(
         modifier = Modifier.horizontalScroll(rememberScrollState()),
-        horizontalArrangement = Arrangement.spacedBy(3.dp)
+        horizontalArrangement = Arrangement.spacedBy(5.dp)
     ) {
         techStackSet.sorted().forEach {
             Text(
