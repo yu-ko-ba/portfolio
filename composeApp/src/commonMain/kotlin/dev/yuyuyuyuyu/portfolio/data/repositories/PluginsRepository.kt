@@ -17,7 +17,7 @@ class PluginsRepository {
             techStack = setOf(TechStack.Kotlin, TechStack.ComposeMultiplatform, TechStack.Gradle),
             repositoryUrl = "https://github.com/yu-ko-ba/ComposePWA",
         )
-    )
+    ).sortedBy { it.repositoryUrl }
 
     fun getPlugins() = plugins
 }

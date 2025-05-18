@@ -28,7 +28,8 @@ fun Portfolio(modifier: Modifier = Modifier) {
                     )
                 }
             }
-        }
+        },
+        containerColor = MaterialTheme.colorScheme.surface,
     ) { innerPadding ->
         NavigableCircuitContent(
             navigator = navigator,

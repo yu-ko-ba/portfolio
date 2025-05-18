@@ -1,11 +1,11 @@
-package dev.yuyuyuyuyu.portfolio.ui.librarylist
+package dev.yuyuyuyuyu.portfolio.ui.clitoollist
 
 import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen
 import dev.yuyuyuyuyu.portfolio.data.models.Product
 
-data object LibraryListScreen : Screen {
+data object CliToolListScreen : Screen {
     data class State(
-        val libraries: List<Product>,
+        val cliTools: List<Product>,
     ) : CircuitUiState
 }

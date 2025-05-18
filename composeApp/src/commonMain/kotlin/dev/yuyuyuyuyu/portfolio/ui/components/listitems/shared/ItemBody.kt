@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.components.listitems.share
+package dev.yuyuyuyuyu.portfolio.ui.components.listitems.shared
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -36,11 +36,15 @@ fun ItemBody(
             Row(
                 modifier = Modifier.clickable(onClick = onSourceCodeLinkClick),
             ) {
-                Icon(Icons.AutoMirrored.Default.OpenInNew, "open in new tab")
+                Icon(
+                    imageVector = Icons.AutoMirrored.Default.OpenInNew,
+                    contentDescription = "open in new tab",
+                    tint = MaterialTheme.colorScheme.secondary,
+                )
                 Spacer(Modifier.width(1.dp))
                 Text(
                     text = repositoryUrl,
-                    color = MaterialTheme.colorScheme.outline,
+                    color = MaterialTheme.colorScheme.secondary,
                     textDecoration = TextDecoration.Underline,
                 )
             }

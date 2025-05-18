@@ -9,14 +9,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import dev.yuyuyuyuyu.portfolio.data.models.Product
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.share.BaseListItem
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.share.ItemBody
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.shared.BaseListItem
+import dev.yuyuyuyuyu.portfolio.ui.components.listitems.shared.ItemBody
 
 @Composable
 fun ProductListItem(
     product: Product,
     icon: ImageVector,
-    iconDescription: String,
+    iconDescription: String?,
     modifier: Modifier = Modifier,
 ) = BaseListItem(
     name = product.name,

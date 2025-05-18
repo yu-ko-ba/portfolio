@@ -53,7 +53,7 @@ class CliToolsRepository {
             techStack = setOf(TechStack.TypeScript, TechStack.NodeJs),
             repositoryUrl = "https://github.com/yu-ko-ba/generate-third-party-licenses-json",
         ),
-    )
+    ).sortedBy { it.repositoryUrl }
 
     fun getCliTools() = cliTools
 }

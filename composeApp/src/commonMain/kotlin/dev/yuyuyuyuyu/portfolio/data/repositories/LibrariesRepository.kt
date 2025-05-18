@@ -51,7 +51,7 @@ class LibrariesRepository {
             ),
             repositoryUrl = "https://github.com/yu-ko-ba/SimpleTopAppBar",
         ),
-    )
+    ).sortedBy { it.repositoryUrl }
 
     fun getLibraries() = libraries
 }
