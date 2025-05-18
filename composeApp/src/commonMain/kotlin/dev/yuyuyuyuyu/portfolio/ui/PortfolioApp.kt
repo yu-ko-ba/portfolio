@@ -11,8 +11,8 @@ import com.slack.circuit.foundation.CircuitCompositionLocals
 import com.slack.circuit.foundation.NavigableCircuitContent
 import com.slack.circuit.foundation.rememberCircuitNavigator
 import dev.yuyuyuyuyu.portfolio.di.portfolioAppModule
-import dev.yuyuyuyuyu.portfolio.ui.appllist.AppListScreen
 import dev.yuyuyuyuyu.portfolio.ui.opensourcelicenselist.OpenSourceLicenseListScreen
+import dev.yuyuyuyuyu.portfolio.ui.portfolio.PortfolioScreen
 import dev.yuyuyuyuyu.portfolio.ui.theme.darkScheme
 import dev.yuyuyuyuyu.portfolio.ui.theme.lightScheme
 import dev.yuyuyuyuyu.simpletopappbar.SimpleTopAppBar
@@ -21,7 +21,7 @@ import org.koin.compose.koinInject
 
 @Composable
 fun PortfolioApp() {
-    val backStack = rememberSaveableBackStack(root = AppListScreen)
+    val backStack = rememberSaveableBackStack(root = PortfolioScreen)
     val navigator = rememberCircuitNavigator(backStack) {}
 
     KoinApplication(application = {
