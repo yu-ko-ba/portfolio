@@ -1,12 +1,14 @@
-package dev.yuyuyuyuyu.portfolio.ui.components.listitems.share
+package dev.yuyuyuyuyu.portfolio.ui.components.listitems.shared
 
+import androidx.compose.foundation.border
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.material3.AssistChip
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -25,10 +27,15 @@ fun SupportingContent(
         horizontalArrangement = Arrangement.spacedBy(3.dp)
     ) {
         techStackSet.sorted().forEach {
-            AssistChip(
-                label = { Text(it.label) },
-                onClick = {},
-                modifier = Modifier.height(25.dp),
+            Text(
+                text = it.label,
+                modifier = Modifier
+                    .border(
+                        width = 1.dp,
+                        color = MaterialTheme.colorScheme.outline,
+                        shape = RoundedCornerShape(5.dp),
+                    )
+                    .padding(horizontal = 4.dp),
             )
         }
     }
