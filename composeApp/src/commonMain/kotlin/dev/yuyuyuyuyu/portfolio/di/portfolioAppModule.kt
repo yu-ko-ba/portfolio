@@ -28,20 +28,26 @@ import org.koin.dsl.module
 val portfolioAppModule = module {
     single {
         Circuit.Builder()
-            .addPresenter<PortfolioScreen, PortfolioScreen.State>(PortfolioPresenter())
-            .addPresenter<AppListScreen, AppListScreen.State>(AppListPresenter(get()))
-            .addPresenter<LibraryListScreen, LibraryListScreen.State>(LibraryListPresenter(get()))
-            .addPresenter<PluginListScreen, PluginListScreen.State>(PluginListPresenter(get()))
-            .addPresenter<CliToolListScreen, CliToolListScreen.State>(CliToolListPresenter(get()))
-            .addPresenter<OpenSourceLicenseListScreen, OpenSourceLicenseListScreen.State>(OpenSourceLicenseListPresenter())
             .addUi<PortfolioScreen, PortfolioScreen.State> { _, modifier -> Portfolio(modifier) }
+            .addPresenter<PortfolioScreen, PortfolioScreen.State>(PortfolioPresenter())
+
             .addUi<AppListScreen, AppListScreen.State> { state, modifier -> AppList(state, modifier) }
+            .addPresenter<AppListScreen, AppListScreen.State>(AppListPresenter(get()))
+
             .addUi<LibraryListScreen, LibraryListScreen.State> { state, modifier -> LibraryList(state, modifier) }
+            .addPresenter<LibraryListScreen, LibraryListScreen.State>(LibraryListPresenter(get()))
+
             .addUi<PluginListScreen, PluginListScreen.State> { state, modifier -> PluginList(state, modifier) }
+            .addPresenter<PluginListScreen, PluginListScreen.State>(PluginListPresenter(get()))
+
             .addUi<CliToolListScreen, CliToolListScreen.State> { state, modifier -> CliToolList(state, modifier) }
+            .addPresenter<CliToolListScreen, CliToolListScreen.State>(CliToolListPresenter(get()))
+
             .addUi<OpenSourceLicenseListScreen, OpenSourceLicenseListScreen.State> { _, modifier ->
                 OpenSourceLicenseList(modifier)
             }
+            .addPresenter<OpenSourceLicenseListScreen, OpenSourceLicenseListScreen.State>(OpenSourceLicenseListPresenter())
+
             .build()
     }
 
