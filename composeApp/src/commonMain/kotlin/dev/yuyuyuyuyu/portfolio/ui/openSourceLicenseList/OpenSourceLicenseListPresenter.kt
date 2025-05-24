@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.opensourcelicenselist
+package dev.yuyuyuyuyu.portfolio.ui.openSourceLicenseList
 
 import androidx.compose.runtime.Composable
 import com.slack.circuit.runtime.presenter.Presenter

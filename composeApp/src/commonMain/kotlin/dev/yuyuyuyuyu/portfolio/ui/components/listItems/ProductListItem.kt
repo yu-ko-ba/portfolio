@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.components.listitems
+package dev.yuyuyuyuyu.portfolio.ui.components.listItems
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
@@ -9,8 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import dev.yuyuyuyuyu.portfolio.data.models.Product
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.shared.BaseListItem
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.shared.ItemBody
+import dev.yuyuyuyuyu.portfolio.ui.components.listItems.shared.BaseListItem
+import dev.yuyuyuyuyu.portfolio.ui.components.listItems.shared.ItemBody
 
 @Composable
 fun ProductListItem(

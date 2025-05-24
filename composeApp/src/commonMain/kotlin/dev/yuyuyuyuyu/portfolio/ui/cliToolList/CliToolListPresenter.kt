@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.clitoollist
+package dev.yuyuyuyuyu.portfolio.ui.cliToolList
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue

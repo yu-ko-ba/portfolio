@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.clitoollist
+package dev.yuyuyuyuyu.portfolio.ui.cliToolList
 
 import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen

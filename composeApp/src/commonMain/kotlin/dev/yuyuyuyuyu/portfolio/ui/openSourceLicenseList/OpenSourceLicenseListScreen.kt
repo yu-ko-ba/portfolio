@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.opensourcelicenselist
+package dev.yuyuyuyuyu.portfolio.ui.openSourceLicenseList
 
 import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen

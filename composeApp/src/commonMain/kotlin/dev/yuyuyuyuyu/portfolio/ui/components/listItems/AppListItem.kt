@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.components.listitems
+package dev.yuyuyuyuyu.portfolio.ui.components.listItems
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -14,8 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import dev.yuyuyuyuyu.portfolio.data.models.App
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.shared.BaseListItem
-import dev.yuyuyuyuyu.portfolio.ui.components.listitems.shared.ItemBody
+import dev.yuyuyuyuyu.portfolio.ui.components.listItems.shared.BaseListItem
+import dev.yuyuyuyuyu.portfolio.ui.components.listItems.shared.ItemBody
 import org.jetbrains.compose.resources.painterResource
 
 @Composable

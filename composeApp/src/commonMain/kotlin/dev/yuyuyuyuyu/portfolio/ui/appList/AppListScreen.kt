@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.appllist
+package dev.yuyuyuyuyu.portfolio.ui.appList
 
 import com.slack.circuit.runtime.CircuitUiState
 import com.slack.circuit.runtime.screen.Screen

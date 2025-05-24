@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import com.slack.circuit.backstack.rememberSaveableBackStack
 import com.slack.circuit.foundation.NavigableCircuitContent
 import com.slack.circuit.foundation.rememberCircuitNavigator
-import dev.yuyuyuyuyu.portfolio.ui.appllist.AppListScreen
+import dev.yuyuyuyuyu.portfolio.ui.appList.AppListScreen
 import dev.yuyuyuyuyu.portfolio.ui.portfolio.models.TabItems
 
 @Composable

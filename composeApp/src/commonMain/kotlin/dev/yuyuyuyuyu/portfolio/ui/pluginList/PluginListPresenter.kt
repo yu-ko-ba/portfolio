@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.pluginlist
+package dev.yuyuyuyuyu.portfolio.ui.pluginList
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue

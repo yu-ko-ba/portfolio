@@ -13,7 +13,7 @@ import com.slack.circuit.foundation.NavigableCircuitContent
 import com.slack.circuit.foundation.rememberCircuitNavigator
 import dev.yuyuyuyuyu.createtypography.createTypographyFrom
 import dev.yuyuyuyuyu.portfolio.di.portfolioAppModule
-import dev.yuyuyuyuyu.portfolio.ui.opensourcelicenselist.OpenSourceLicenseListScreen
+import dev.yuyuyuyuyu.portfolio.ui.openSourceLicenseList.OpenSourceLicenseListScreen
 import dev.yuyuyuyuyu.portfolio.ui.portfolio.PortfolioScreen
 import dev.yuyuyuyuyu.portfolio.ui.theme.darkScheme
 import dev.yuyuyuyuyu.portfolio.ui.theme.lightScheme

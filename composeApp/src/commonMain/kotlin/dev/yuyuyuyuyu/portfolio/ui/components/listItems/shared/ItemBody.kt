@@ -1,4 +1,4 @@
-package dev.yuyuyuyuyu.portfolio.ui.components.listitems.shared
+package dev.yuyuyuyuyu.portfolio.ui.components.listItems.shared
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
