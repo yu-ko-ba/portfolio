@@ -19,6 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.UriHandler
+import androidx.compose.ui.semantics.onClick
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
 import dev.yuyuyuyuyu.portfolio.data.models.TechStack
 import dev.yuyuyuyuyu.portfolio.ui.components.ExpandMoreIcon
@@ -36,10 +39,18 @@ fun BaseListItem(
     val uriHandler = LocalUriHandler.current
 
     val interactionSource = remember { MutableInteractionSource() }
+    val onClick = { expanded = !expanded }
     Column(
         modifier = modifier
-            .clickable(interactionSource = interactionSource, indication = null) { expanded = !expanded }
-            .background(MaterialTheme.colorScheme.surface),
+            .clickable(interactionSource = interactionSource, indication = null, onClick = onClick)
+            .background(MaterialTheme.colorScheme.surface)
+            .semantics {
+                stateDescription = if (expanded) "展開済み" else "折りたたみ済み"
+                onClick(label = if (expanded) "たたむ" else "開く") {
+                    onClick()
+                    true
+                }
+            },
     ) {
         ListItem(
             leadingContent = {
