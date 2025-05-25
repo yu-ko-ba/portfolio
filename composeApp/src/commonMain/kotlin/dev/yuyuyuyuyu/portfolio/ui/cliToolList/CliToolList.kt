@@ -10,7 +10,7 @@ import dev.yuyuyuyuyu.portfolio.ui.components.listItems.ProductListItem
 
 @Composable
 fun CliToolList(state: CliToolListScreen.State, modifier: Modifier = Modifier) = LazyColumn(modifier) {
-    items(state.cliTools) { cliTool ->
+    items(items = state.cliTools, key = { cliTool -> cliTool.name }) { cliTool ->
         ProductListItem(
             product = cliTool,
             icon = Icons.Default.Terminal,

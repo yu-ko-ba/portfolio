@@ -13,7 +13,7 @@ fun PluginList(
     state: PluginListScreen.State,
     modifier: Modifier = Modifier,
 ) = LazyColumn(modifier) {
-    items(state.plugins) { plugin ->
+    items(items = state.plugins, key = { plugin -> plugin.name }) { plugin ->
         ProductListItem(
             product = plugin,
             icon = Icons.Default.Bolt,

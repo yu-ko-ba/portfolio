@@ -10,7 +10,7 @@ import dev.yuyuyuyuyu.portfolio.ui.components.listItems.ProductListItem
 
 @Composable
 fun LibraryList(state: LibraryListScreen.State, modifier: Modifier = Modifier) = LazyColumn(modifier) {
-    items(state.libraries) { library ->
+    items(items = state.libraries, key = { library -> library.name }) { library ->
         ProductListItem(
             product = library,
             icon = Icons.Default.Book,

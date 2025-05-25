@@ -8,7 +8,7 @@ import dev.yuyuyuyuyu.portfolio.ui.components.listItems.AppListItem
 
 @Composable
 fun AppList(state: AppListScreen.State, modifier: Modifier = Modifier) = LazyColumn(modifier) {
-    items(state.apps) { app ->
+    items(items = state.apps, key = { app -> app.name }) { app ->
         AppListItem(app)
     }
 }
