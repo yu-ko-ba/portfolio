@@ -1,5 +1,6 @@
 package dev.yuyuyuyuyu.portfolio.ui.components.listItems.shared
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -78,7 +79,7 @@ fun BaseListItem(
             },
         )
 
-        if (expanded) {
+        AnimatedVisibility(visible = expanded) {
             expandedItem(uriHandler)
         }
 
