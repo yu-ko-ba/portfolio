@@ -1,6 +1,9 @@
 package dev.yuyuyuyuyu.portfolio.ui.components.listItems.shared
 
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.indication
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
@@ -8,7 +11,10 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.onClick
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 
@@ -26,19 +32,30 @@ fun ItemBody(
     ) {
         additionalContent()
 
+        val interactionSource = remember { MutableInteractionSource() }
         Column(
-            modifier = Modifier.padding(horizontal = 10.dp),
+            modifier = Modifier.padding(horizontal = 10.dp)
+                .clickable(interactionSource = interactionSource, indication = null, onClick = onSourceCodeLinkClick)
+                .semantics {
+                    onClick(label = "ソースコードのページを新しいタブで開く") {
+                        onSourceCodeLinkClick()
+                        true
+                    }
+                },
         ) {
             Text(
                 text = sourceCodeLabel,
                 style = MaterialTheme.typography.titleMedium,
             )
             Row(
-                modifier = Modifier.clickable(onClick = onSourceCodeLinkClick),
+                modifier = Modifier.indication(
+                    interactionSource = interactionSource,
+                    indication = LocalIndication.current,
+                )
             ) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Default.OpenInNew,
-                    contentDescription = "open in new tab",
+                    contentDescription = null,
                     tint = MaterialTheme.colorScheme.secondary,
                 )
                 Spacer(Modifier.width(1.dp))
