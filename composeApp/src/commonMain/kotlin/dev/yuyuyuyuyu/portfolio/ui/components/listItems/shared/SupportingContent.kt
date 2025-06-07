@@ -11,6 +11,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dev.yuyuyuyuyu.portfolio.data.models.TechStack
@@ -29,7 +30,8 @@ fun SupportingContent(
         modifier = Modifier.horizontalScroll(rememberScrollState()),
         horizontalArrangement = Arrangement.spacedBy(5.dp)
     ) {
-        techStackSet.sorted().forEach {
+        val techStacks = remember(techStackSet) { techStackSet.sortedBy { it.ordinal } }
+        techStacks.forEach {
             Text(
                 text = it.label,
                 modifier = Modifier
